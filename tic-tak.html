@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font Link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Raleway:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* font-family: "Raleway", sans-serif; */
+        font-family: "Permanent Marker", cursive;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #1d2b53;
+      }
+      .wrapper {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 320px;
+      }
+      .container {
+        width: 300px;
+        aspect-ratio: 1;
+        background: rgb(134, 167, 137);
+        box-shadow: rgb(79, 111, 82) 0px 7px 29px 0px;
+        border-radius: 8px;
+        padding: 12px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(80px, 1fr));
+        grid-template-rows: repeat(3, minmax(80px, 1fr));
+        gap: 12px;
+      }
+      .box {
+        width: 80px;
+        aspect-ratio: 1;
+        color: #ff004d;
+        background: #faef5d;
+        box-shadow: rgba(236, 228, 106, 0.3) 0px 48px 100px 0px;
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: scale 0.3s linear;
+        /* grid-area: 1/1/2/2 */
+      }
+      .box:active {
+        scale: 0.9;
+      }
+      .box.disabled {
+        background-color: #c9c488;
+      }
+      .playerStatus {
+        font-size: 1.3rem;
+        font-family: "Raleway", sans-serif;
+        color: white;
+        width: 100%;
+        text-align: center;
+        letter-spacing: 4px;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container"></div>
+      <div class="playerStatus"></div>
+    </div>
+
+    <script src="active.js"></script>
+  </body>
+</html>
